@@ -23,6 +23,7 @@ public class ConverterPlugin extends JavaPlugin {
     public void onEnable() {
         setupRegistry();
         setupConverters();
+        registerListeners();
         registerCommands();
     }
 
@@ -34,6 +35,10 @@ public class ConverterPlugin extends JavaPlugin {
         this.converters = new HashSet<>();
         this.converters.add(new ToolArmourConverter(enchantRegistry));
         this.converters.add(new BookConverter(enchantRegistry));
+    }
+
+    private void registerListeners() {
+        getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
     }
 
     private void registerCommands() {
