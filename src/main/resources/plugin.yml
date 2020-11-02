@@ -1,6 +1,6 @@
 name: EEAEConverter
 version: 1.0
-main: com.oneblockmc.converter.EEAEConverterPlugin
+main: com.oneblockmc.converter.ConverterPlugin
 author: Digital
 api-version: 1.15
 commands:

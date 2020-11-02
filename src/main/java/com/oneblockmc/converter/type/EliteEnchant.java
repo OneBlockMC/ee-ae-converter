@@ -184,23 +184,26 @@ public enum EliteEnchant {
         this.max = max;
     }
 
+    public static EliteEnchant of(@NonNull String keyName) {
+        return EliteEnchant.valueOf(keyName
+                .replaceAll("-", "_").toUpperCase());
+    }
+
     public boolean has(@NonNull NBTItem nbtItem) {
         if (nbtItem.hasKey(ELITE_ENCHANTMENTS_NBT_KEY)) {
             NBTCompound compound = nbtItem.getCompound(ELITE_ENCHANTMENTS_NBT_KEY);
-            String keyName = name().toLowerCase().replace("_", "-");
+            String keyName = name().toLowerCase().replaceAll("_", "-");
             return compound.hasKey(keyName);
         }
-
         return false;
     }
 
     public int getLevel(@NonNull NBTItem nbtItem) {
         if (nbtItem.hasKey(ELITE_ENCHANTMENTS_NBT_KEY)) {
             NBTCompound compound = nbtItem.getCompound(ELITE_ENCHANTMENTS_NBT_KEY);
-            String keyName = name().toLowerCase().replace("_", "-");
+            String keyName = name().toLowerCase().replaceAll("_", "-");
             return compound.getInteger(keyName);
         }
-
         return -1;
     }
 }

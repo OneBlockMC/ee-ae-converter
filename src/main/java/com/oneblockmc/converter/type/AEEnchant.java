@@ -1,6 +1,8 @@
 package com.oneblockmc.converter.type;
 
+import de.tr7zw.changeme.nbtapi.NBTItem;
 import lombok.Getter;
+import lombok.NonNull;
 
 @Getter
 public enum AEEnchant {
@@ -200,11 +202,18 @@ public enum AEEnchant {
     DEATHPACT(1, 3),
     WEBWALKER(1, 1);
 
+    private final static String AE_ENCHANTMENT_NBT_KEY = "ae_enchantment;%s";
+
     private final int min;
     private final int max;
 
     AEEnchant(int min, int max) {
         this.min = min;
         this.max = max;
+    }
+
+    public void add(@NonNull NBTItem nbtItem, int level) {
+        String keyName = String.format(AE_ENCHANTMENT_NBT_KEY, name().toLowerCase());
+        nbtItem.setInteger(keyName, Math.min(Math.max(level, min), max));
     }
 }

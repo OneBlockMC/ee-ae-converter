@@ -5,13 +5,18 @@ import com.oneblockmc.converter.type.EliteEnchant;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
-public class ConverterRegistry {
+public class EnchantRegistry {
 
     private final Map<EliteEnchant, AEEnchant> eliteToAeMap;
-    public ConverterRegistry() {
+    public EnchantRegistry() {
         this.eliteToAeMap = new HashMap<>();
         init();
+    }
+
+    public Optional<AEEnchant> getEquivalent(EliteEnchant enchant) {
+        return Optional.ofNullable(eliteToAeMap.get(enchant));
     }
 
     private void init() {
