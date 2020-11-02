@@ -29,16 +29,13 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.DECAPITATION, AEEnchant.DECAPITATION);
         eliteToAeMap.put(EliteEnchant.OBLITERATE, AEEnchant.OBLITERATE);
         eliteToAeMap.put(EliteEnchant.HASTE, AEEnchant.HASTE);
-        // eliteToAeMap.put(EliteEnchant.HEALING, ...);
         eliteToAeMap.put(EliteEnchant.AUTO_SMELT, AEEnchant.AUTOSMELT);
         eliteToAeMap.put(EliteEnchant.AQUATIC, AEEnchant.AQUATIC);
         eliteToAeMap.put(EliteEnchant.GLOWING, AEEnchant.GLOWING);
         eliteToAeMap.put(EliteEnchant.OXYGENATE, AEEnchant.OXYGENATE);
-        // eliteToAeMap.put(EliteEnchant.DEEP_WOUNDS, ...);
         eliteToAeMap.put(EliteEnchant.FEATHERWEIGHT, AEEnchant.FEATHERWEIGHT);
         eliteToAeMap.put(EliteEnchant.NUTRITION, AEEnchant.SUSTAIN);
         eliteToAeMap.put(EliteEnchant.RAGDOLL, AEEnchant.RAGDOLL);
-        // eliteToAeMap.put(EliteEnchant.OBSIDIAN_DESTROYER, ...);
         eliteToAeMap.put(EliteEnchant.BERSERK, AEEnchant.BERSERK);
         eliteToAeMap.put(EliteEnchant.PLAGUE_CARRIER, AEEnchant.PLAGUECARRIER);
         eliteToAeMap.put(EliteEnchant.SELF_DESTRUCT, AEEnchant.SELFDESTRUCT);
@@ -63,7 +60,6 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.STORMCALLER, AEEnchant.STORMCALLER);
         eliteToAeMap.put(EliteEnchant.INFERNAL, AEEnchant.INFERNAL);
         eliteToAeMap.put(EliteEnchant.VENOM, AEEnchant.VENOM);
-        // eliteToAeMap.put(EliteEnchant.SOLITUDE, ...);
         eliteToAeMap.put(EliteEnchant.VAMPIRE, AEEnchant.VAMPIRE);
         eliteToAeMap.put(EliteEnchant.FROZEN, AEEnchant.FROZEN);
         eliteToAeMap.put(EliteEnchant.WITHER, AEEnchant.WITHER);
@@ -95,7 +91,6 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.HELLFIRE, AEEnchant.HELLFIRE);
         eliteToAeMap.put(EliteEnchant.VALOR, AEEnchant.VALOR);
         eliteToAeMap.put(EliteEnchant.ARROW_BREAK, AEEnchant.ARROWBREAK);
-        // eliteToAeMap.put(EliteEnchant.LUCKY, ...);
         eliteToAeMap.put(EliteEnchant.ENRAGE, AEEnchant.ENRAGE);
         eliteToAeMap.put(EliteEnchant.TANK, AEEnchant.TANK);
         eliteToAeMap.put(EliteEnchant.BLESSED, AEEnchant.BLESSED);
@@ -112,25 +107,20 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.PIERCING, AEEnchant.PIERCING);
         eliteToAeMap.put(EliteEnchant.EAGLE_EYE, AEEnchant.EAGLEEYE);
         eliteToAeMap.put(EliteEnchant.BLEED, AEEnchant.BLEED);
-        // eliteToAeMap.put(EliteEnchant.FUSE, ...);
         eliteToAeMap.put(EliteEnchant.DEATH_GOD, AEEnchant.DEATHGOD);
         eliteToAeMap.put(EliteEnchant.HEX, AEEnchant.HEX);
         eliteToAeMap.put(EliteEnchant.BLACKSMITH, AEEnchant.BLACKSMITH);
         eliteToAeMap.put(EliteEnchant.DOUBLE_STRIKE, AEEnchant.DOUBLESTRIKE);
         eliteToAeMap.put(EliteEnchant.BARBARIAN, AEEnchant.BARBARIAN);
-        // eliteToAeMap.put(EliteEnchant.BLOOD_LUST, ...);
         eliteToAeMap.put(EliteEnchant.LIFESTEAL, AEEnchant.LIFESTEAL);
         eliteToAeMap.put(EliteEnchant.ENLIGHTED, AEEnchant.ENLIGHTED);
         eliteToAeMap.put(EliteEnchant.SILENCE, AEEnchant.SILENCE);
         eliteToAeMap.put(EliteEnchant.INVERSION, AEEnchant.INVERSION);
-        // eliteToAeMap.put(EliteEnchant.ANTI_GANK, ...);
         eliteToAeMap.put(EliteEnchant.OVERLOAD, AEEnchant.OVERLOAD);
-        // eliteToAeMap.put(EliteEnchant.AEGIS, ...);
         eliteToAeMap.put(EliteEnchant.CLARITY, AEEnchant.CLARITY);
         eliteToAeMap.put(EliteEnchant.DEVOUR, AEEnchant.DEVOUR);
         eliteToAeMap.put(EliteEnchant.INQUISITIVE, AEEnchant.INQUISITIVE);
         eliteToAeMap.put(EliteEnchant.ARMORED, AEEnchant.ARMORED);
-        // eliteToAeMap.put(EliteEnchant.BLOOD_LINK, ...);
         eliteToAeMap.put(EliteEnchant.SNIPER, AEEnchant.SNIPER);
         eliteToAeMap.put(EliteEnchant.RAGE, AEEnchant.RAGE);
         eliteToAeMap.put(EliteEnchant.DRUNK, AEEnchant.DRUNK);
@@ -160,7 +150,6 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.PALADIN_ARMORED, AEEnchant.PALADINARMORED);
         eliteToAeMap.put(EliteEnchant.VENGEFUL_DIMINISH, AEEnchant.VENGEFULDIMINISH);
         eliteToAeMap.put(EliteEnchant.BIDIRECTIONAL_TELEPORTATION, AEEnchant.BIDIRECTIONALTELEPORTATION);
-        // eliteToAeMap.put(EliteEnchant.DEEP_BLEED, ...);
         eliteToAeMap.put(EliteEnchant.GUIDED_ROCKET_ESCAPE, AEEnchant.GUIDEDROCKETESCAPE);
         eliteToAeMap.put(EliteEnchant.MIGHTY_CACTUS, AEEnchant.MIGHTYCACTUS);
         eliteToAeMap.put(EliteEnchant.MIGHTY_CLEAVE, AEEnchant.MIGHTYCLEAVE);
@@ -175,5 +164,16 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.SOUL_HARDENED, AEEnchant.SOULHARDENED);
         // eliteToAeMap.put(EliteEnchant.NEUTRALIZE, ...);
         // eliteToAeMap.put(EliteEnchant.MORTAL_COIL, ...);
+        // eliteToAeMap.put(EliteEnchant.DEEP_BLEED, ...);
+        // eliteToAeMap.put(EliteEnchant.BLOOD_LUST, ...);
+        // eliteToAeMap.put(EliteEnchant.BLOOD_LINK, ...);
+        // eliteToAeMap.put(EliteEnchant.AEGIS, ...);
+        // eliteToAeMap.put(EliteEnchant.ANTI_GANK, ...);
+        // eliteToAeMap.put(EliteEnchant.FUSE, ...);
+        // eliteToAeMap.put(EliteEnchant.LUCKY, ...);
+        // eliteToAeMap.put(EliteEnchant.SOLITUDE, ...);
+        // eliteToAeMap.put(EliteEnchant.OBSIDIAN_DESTROYER, ...);
+        // eliteToAeMap.put(EliteEnchant.DEEP_WOUNDS, ...);
+        // eliteToAeMap.put(EliteEnchant.HEALING, ...);
     }
 }

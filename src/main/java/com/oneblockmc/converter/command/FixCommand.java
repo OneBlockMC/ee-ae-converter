@@ -1,6 +1,7 @@
 package com.oneblockmc.converter.command;
 
-import com.oneblockmc.converter.Converter;
+import com.oneblockmc.converter.ConverterPlugin;
+import com.oneblockmc.converter.convert.Converter;
 import de.tr7zw.changeme.nbtapi.NBTItem;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -12,9 +13,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class FixCommand implements CommandExecutor {
 
-    private final Converter converter;
-    public FixCommand(Converter converter) {
-        this.converter = converter;
+    private final ConverterPlugin plugin;
+    public FixCommand(ConverterPlugin plugin) {
+        this.plugin = plugin;
     }
 
     @Override
@@ -25,13 +26,16 @@ public class FixCommand implements CommandExecutor {
 
             if (hand != null && hand.getType() != Material.AIR) {
                 NBTItem nbtItem = new NBTItem(hand);
-                if (converter.can(nbtItem)) {
-                    if (converter.convert(nbtItem)) {
-                        sender.sendMessage(ChatColor.GREEN + "Enchants have been fixed.");
-                        player.getInventory().setItemInMainHand(nbtItem.getItem());
-                    } else {
-                        sender.sendMessage(ChatColor.RED + "You cannot fix this item.");
+                boolean handled = false;
+                for (Converter converter : plugin.getConverters()) {
+                    if (converter.can(hand.getType(), nbtItem) && converter.execute(nbtItem)) {
+                        handled = true;
                     }
+                }
+
+                if (handled) {
+                    sender.sendMessage(ChatColor.GREEN + "Enchantments have been fixed.");
+                    player.getInventory().setItemInMainHand(nbtItem.getItem());
                 } else {
                     sender.sendMessage(ChatColor.RED + "You cannot fix this item.");
                 }
