@@ -3,7 +3,7 @@ plugins {
     id 'java'
 }
 
-group 'com.github.dig.autoclicker'
+group 'com.oneblockmc.converter'
 version '1.0-SNAPSHOT'
 
 shadowJar {
