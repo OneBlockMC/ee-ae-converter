@@ -28,6 +28,7 @@ public class FixCommand implements CommandExecutor {
                 if (converter.can(nbtItem)) {
                     if (converter.convert(nbtItem)) {
                         sender.sendMessage(ChatColor.GREEN + "Enchants have been fixed.");
+                        player.getInventory().setItemInMainHand(nbtItem.getItem());
                     } else {
                         sender.sendMessage(ChatColor.RED + "You cannot fix this item.");
                     }
