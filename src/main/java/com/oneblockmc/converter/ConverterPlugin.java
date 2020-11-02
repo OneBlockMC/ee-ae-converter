@@ -33,7 +33,7 @@ public class ConverterPlugin extends JavaPlugin {
     private void setupConverters() {
         this.converters = new HashSet<>();
         this.converters.add(new ToolArmourConverter(enchantRegistry));
-        this.converters.add(new BookConverter());
+        this.converters.add(new BookConverter(enchantRegistry));
     }
 
     private void registerCommands() {

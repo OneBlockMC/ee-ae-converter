@@ -204,6 +204,9 @@ public enum AEEnchant {
 
     private final static String AE_ENCHANTMENT_NBT_KEY = "ae_enchantment;%s";
 
+    private final static String AE_BOOK_NBT_KEY = "book";
+    private final static String AE_BOOK_NBT_VALUE = "ae_valid;%s;%d;%d;%d;";
+
     private final int min;
     private final int max;
 
@@ -215,5 +218,14 @@ public enum AEEnchant {
     public void add(@NonNull NBTItem nbtItem, int level) {
         String keyName = String.format(AE_ENCHANTMENT_NBT_KEY, name().toLowerCase());
         nbtItem.setInteger(keyName, Math.min(Math.max(level, min), max));
+    }
+
+    public void addBook(@NonNull NBTItem nbtItem, int level, int success, int destroy) {
+        String value = String.format(AE_BOOK_NBT_VALUE,
+                name().toLowerCase(),
+                Math.min(Math.max(level, min), max),
+                destroy,
+                success);
+        nbtItem.setString(AE_BOOK_NBT_KEY, value);
     }
 }

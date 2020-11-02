@@ -26,7 +26,7 @@ public class ToolArmourConverter implements Converter {
     public boolean can(Material material, @NonNull NBTItem nbtItem) {
         return nbtItem.hasKey(ELITE_ENCHANTMENTS_NBT_KEY)
                 && (!nbtItem.hasKey(CONVERTED_NBT_KEY)
-                || nbtItem.getInteger(CONVERTED_NBT_KEY) < CONVERTED_NBT_VERSION);
+                    || nbtItem.getInteger(CONVERTED_NBT_KEY) < CONVERTED_NBT_VERSION);
     }
 
     @Override
