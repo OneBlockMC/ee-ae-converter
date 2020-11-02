@@ -52,7 +52,6 @@ public class BookConverter implements Converter {
                     AEEnchant aeEnchant = aeEnchantOptional.get();
                     aeEnchant.addBook(nbtItem, enchantLevel, success, destroy);
 
-                    System.out.println(aeEnchant.name() + " : " + enchantLevel + " : " + success + " : " + destroy);
                     nbtItem.setInteger(CONVERTED_NBT_KEY, CONVERTED_NBT_VERSION);
                     return true;
                 }
