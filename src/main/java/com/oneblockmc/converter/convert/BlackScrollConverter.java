@@ -14,7 +14,8 @@ public class BlackScrollConverter implements Converter {
 
     @Override
     public boolean can(Material material, @NonNull NBTItem nbtItem) {
-        return nbtItem.hasKey(EE_BLACKSCROLL_NBT_KEY)
+        return material == Material.GRAY_DYE
+                && nbtItem.hasKey(EE_BLACKSCROLL_NBT_KEY)
                 && (!nbtItem.hasKey(CONVERTED_NBT_KEY)
                     || nbtItem.getInteger(CONVERTED_NBT_KEY) < CONVERTED_NBT_VERSION);
     }
