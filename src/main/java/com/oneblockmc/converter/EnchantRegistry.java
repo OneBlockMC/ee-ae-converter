@@ -86,7 +86,7 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.HEAVY, AEEnchant.HEAVY);
         eliteToAeMap.put(EliteEnchant.GUARDIANS, AEEnchant.GUARDIANS);
         eliteToAeMap.put(EliteEnchant.DODGE, AEEnchant.DODGE);
-        eliteToAeMap.put(EliteEnchant.OBSIDIAN_SHIELD, AEEnchant.OBSIDIANSHIELD);
+        eliteToAeMap.put(EliteEnchant.OBSIDIANSHIELD, AEEnchant.OBSIDIANSHIELD);
         eliteToAeMap.put(EliteEnchant.ARROW_LIFESTEAL, AEEnchant.ARROWLIFESTEAL);
         eliteToAeMap.put(EliteEnchant.HELLFIRE, AEEnchant.HELLFIRE);
         eliteToAeMap.put(EliteEnchant.VALOR, AEEnchant.VALOR);
