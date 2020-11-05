@@ -122,7 +122,7 @@ public enum EliteEnchant {
     SNIPER(1, 5),
     RAGE(1, 6),
     DRUNK(1, 4),
-    DEATH_BRINGER(1, 3),
+    DEATHBRINGER(1, 3),
     DIMINISH(1, 6),
     GEARS(1, 3),
     INSANITY(1, 8),
