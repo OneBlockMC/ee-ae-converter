@@ -78,7 +78,7 @@ public enum EliteEnchant {
     HEAVY(1, 5),
     GUARDIANS(1, 10),
     DODGE(1, 5),
-    OBSIDIAN_SHIELD(1, 1),
+    OBSIDIANSHIELD(1, 1),
     ARROW_LIFESTEAL(1, 5),
     HELLFIRE(1, 5),
     VALOR(1, 5),
