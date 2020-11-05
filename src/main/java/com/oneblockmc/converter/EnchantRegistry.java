@@ -124,7 +124,7 @@ public class EnchantRegistry {
         eliteToAeMap.put(EliteEnchant.SNIPER, AEEnchant.SNIPER);
         eliteToAeMap.put(EliteEnchant.RAGE, AEEnchant.RAGE);
         eliteToAeMap.put(EliteEnchant.DRUNK, AEEnchant.DRUNK);
-        eliteToAeMap.put(EliteEnchant.DEATH_BRINGER, AEEnchant.DEATHBRINGER);
+        eliteToAeMap.put(EliteEnchant.DEATHBRINGER, AEEnchant.DEATHBRINGER);
         eliteToAeMap.put(EliteEnchant.DIMINISH, AEEnchant.DIMINISH);
         eliteToAeMap.put(EliteEnchant.GEARS, AEEnchant.GEARS);
         eliteToAeMap.put(EliteEnchant.INSANITY, AEEnchant.INSANITY);
