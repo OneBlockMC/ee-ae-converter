@@ -6,10 +6,13 @@ import com.oneblockmc.converter.type.EliteEnchant;
 import de.tr7zw.changeme.nbtapi.NBTCompound;
 import de.tr7zw.changeme.nbtapi.NBTItem;
 import lombok.NonNull;
+import lombok.extern.java.Log;
 import org.bukkit.Material;
 
 import java.util.Optional;
+import java.util.logging.Level;
 
+@Log
 public class ToolArmourConverter implements Converter {
 
     private final static String CONVERTED_NBT_KEY = "toolarmour_convert";
@@ -34,7 +37,14 @@ public class ToolArmourConverter implements Converter {
         if (nbtItem.hasKey(ELITE_ENCHANTMENTS_NBT_KEY)) {
             NBTCompound compound = nbtItem.getCompound(ELITE_ENCHANTMENTS_NBT_KEY);
             for (String enchantKey : compound.getKeys()) {
-                EliteEnchant enchant = EliteEnchant.of(enchantKey);
+                EliteEnchant enchant;
+                try {
+                    enchant = EliteEnchant.of(enchantKey);
+                } catch (IllegalArgumentException e) {
+                    log.log(Level.SEVERE, "Unable to find elite enchant for " + enchantKey);
+                    return false;
+                }
+
                 if (enchant != null) {
                     Optional<AEEnchant> aeEnchantOptional = enchantRegistry.getEquivalent(enchant);
                     if (aeEnchantOptional.isPresent()) {
