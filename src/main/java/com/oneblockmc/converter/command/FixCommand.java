@@ -26,16 +26,27 @@ public class FixCommand implements CommandExecutor {
 
             if (hand != null && hand.getType() != Material.AIR) {
                 NBTItem nbtItem = new NBTItem(hand);
+
                 boolean handled = false;
+                Material newType = null;
+
                 for (Converter converter : plugin.getConverters()) {
                     if (converter.can(hand.getType(), nbtItem) && converter.execute(nbtItem)) {
                         handled = true;
+                        if (converter.type() != null && converter.type() != hand.getType()) {
+                            newType = converter.type();
+                        }
                     }
                 }
 
                 if (handled) {
+                    ItemStack replace = nbtItem.getItem();
+                    if (newType != null) {
+                        replace.setType(newType);
+                    }
+                    player.getInventory().setItemInMainHand(replace);
+
                     sender.sendMessage(ChatColor.GREEN + "Enchantments have been fixed.");
-                    player.getInventory().setItemInMainHand(nbtItem.getItem());
                 } else {
                     sender.sendMessage(ChatColor.RED + "You cannot fix this item.");
                 }

@@ -60,4 +60,9 @@ public class ToolArmourConverter implements Converter {
 
         return false;
     }
+
+    @Override
+    public Material type() {
+        return null;
+    }
 }

@@ -10,7 +10,6 @@ public class UnopenedBookConverter implements Converter {
     private final static int CONVERTED_NBT_VERSION = 1;
 
     private final static String EE_BOOK_NBT_KEY = "book";
-
     private final static String AE_RCBOOK_NBT_KEY = "rcbook";
     private final static String AE_RCBOOK_NBT_VALUE = "ae_book;%s;";
 
@@ -37,6 +36,12 @@ public class UnopenedBookConverter implements Converter {
             nbtItem.setInteger(CONVERTED_NBT_KEY, CONVERTED_NBT_VERSION);
             return true;
         }
+
         return false;
+    }
+
+    @Override
+    public Material type() {
+        return null;
     }
 }

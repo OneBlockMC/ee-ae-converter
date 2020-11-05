@@ -10,4 +10,6 @@ public interface Converter {
 
     boolean execute(@NonNull NBTItem nbtItem);
 
+    Material type();
+
 }

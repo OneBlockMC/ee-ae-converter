@@ -28,14 +28,23 @@ public class PlayerListener implements Listener {
                 NBTItem nbtItem = new NBTItem(item);
 
                 boolean handled = false;
+                Material newType = null;
+
                 for (Converter converter : plugin.getConverters()) {
                     if (converter.can(item.getType(), nbtItem) && converter.execute(nbtItem)) {
                         handled = true;
+                        if (converter.type() != null && converter.type() != item.getType()) {
+                            newType = converter.type();
+                        }
                     }
                 }
 
                 if (handled) {
-                    playerInventory.setItem(i, nbtItem.getItem());
+                    ItemStack replace = nbtItem.getItem();
+                    if (newType != null) {
+                        replace.setType(newType);
+                    }
+                    playerInventory.setItem(i, replace);
                 }
             }
         }
