@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     annotationProcessor 'org.projectlombok:lombok:1.18.8'
-    compile 'de.tr7zw:item-nbt-api:2.5.0'
+    compile 'de.tr7zw:item-nbt-api:2.6.0'
     compileOnly 'org.projectlombok:lombok:1.18.8'
     compileOnly 'org.spigotmc:spigot-api:1.16.1-R0.1-SNAPSHOT'
 }
